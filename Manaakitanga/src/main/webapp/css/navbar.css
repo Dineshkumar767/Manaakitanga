@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar-brand span {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navbar .btn-outline-primary {
+    border-color: orange;
+    color: orange;
+}
+.navbar .btn-outline-primary:hover {
+    color: white;
+    background-color: orange;
+}
+
+.navbar .btn-primary {
+    background-color: orange;
+    border-color: orange;
+}
+
+@media (max-width: 576px) {
+	 .navbar-nav {
+        text-align: center;
+    }
+}

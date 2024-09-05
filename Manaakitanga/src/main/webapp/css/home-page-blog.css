@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+
+@charset "UTF-8";
+
+/* Blog Images Styling */
+.blog-post img {
+    width: 100%; /* Make the image take up the full width of its container */
+    height: 250px; /* Set a fixed height for all blog images */
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for box shadow and scale on hover */
+    border-radius: 10px; /* Optional: Adds rounded corners to images */
+}
+
+/* Hover effect */
+.blog-post img:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Box shadow effect */
+    transform: scale(1.05); /* Slightly scale the image for a pop-out effect */
+}
+
+/* Adjusting the overall blog post appearance */
+.blog-post {
+    background-color: #f8f9fa; /* Background color for the blog post container */
+    border-radius: 10px; /* Rounded corners for the blog post container */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Light shadow around the blog post container */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for box shadow */
+}
+
+.blog-post:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}

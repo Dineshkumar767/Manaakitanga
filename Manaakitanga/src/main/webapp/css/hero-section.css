@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('../assets/our-vision.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: white;
+    overflow: hidden;
+    padding: 20px; /* Added padding for smaller screens */
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content {
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+    padding: 20px; /* Added padding for smaller screens */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row; /* Change to row for side-by-side */
+    align-items: center;
+    gap: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.button {
+    background-color: white; /* Change background color to white */
+    color: black;
+    padding: 15px 30px;
+    border: 1px solid #FFD700; /* Add a border for a button-like appearance */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #FFD700;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+
+/* Mobile-Only Content */
+.hero-mobile-content {
+    display: none; /* Hide by default */
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    font-size: 16px;
+}
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        padding: 10px 20px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+
+    /* Show mobile-only content */
+    .hero-mobile-content {
+        display: block;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        padding: 6px 12px;
+    }
+
+    /* Mobile-only content */
+    .hero-mobile-content {
+        font-size: 14px;
+    }
+}
